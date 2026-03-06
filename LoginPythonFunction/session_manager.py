@@ -7,8 +7,6 @@ class SessionManager:
     def __init__(self):
 
         self.sessions = {}
-
-        # Intended session timeout = 5 minutes
         self.session_timeout = 5 * 60
 
 
@@ -18,7 +16,7 @@ class SessionManager:
 
         self.sessions[session_id] = {
             "username": username,
-            "login_time": int(time.time() / 60)  # BUG HERE
+            "login_time": int(time.time() / 60)
         }
 
         return session_id
@@ -45,4 +43,5 @@ class SessionManager:
     def end_session(self, session_id):
 
         if session_id in self.sessions:
+
             del self.sessions[session_id]
