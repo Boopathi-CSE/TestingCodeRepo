@@ -130,7 +130,7 @@ class TaskManager:
         print("\nTasks Grouped by Priority")
         print("----------------------------")
 
-        for p in priorities:  # <-- BUG: variable doesn't exist
+        for p in priorities:
             print(p.upper())
             for t in priority_map[p]:
                 print(" -", t)
@@ -192,4 +192,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
