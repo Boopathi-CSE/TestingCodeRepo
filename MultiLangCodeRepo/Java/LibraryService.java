@@ -25,7 +25,7 @@ public class LibraryService {
 
         System.out.println("\nLibrary Books:");
 
-        for (int i = 0; i <= books.size(); i++) {  // BUG #1
+        for (int i = 0; i <= books.size(); i++) {
             System.out.println(i + " : " + books.get(i));
         }
     }
@@ -76,10 +76,11 @@ public class LibraryService {
         System.out.println("Borrowed: " + borrowed);
         System.out.println("Available: " + available);
 
-        double borrowRate = borrowed / total * 100;  // BUG #2
+        double borrowRate = borrowed / total * 100;
         System.out.println("Borrow rate: " + borrowRate + "%");
 
-        Book oldest = BookUtils.findOldestBook(books); // BUG #3
+        Book oldest = BookUtils.findOldestBook(books);
         System.out.println("Oldest Book: " + oldest.getTitle());
     }
+
 }
